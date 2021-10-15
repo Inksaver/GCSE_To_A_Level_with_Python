@@ -28,7 +28,6 @@ function main()
 end
 
 main()
-
 print("Press Enter to quit")
 io.read()
 ```
