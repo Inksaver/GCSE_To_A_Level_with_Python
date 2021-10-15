@@ -1,12 +1,12 @@
 The first code written in a text based language is the obligatory "Hello World"
 
-such as [this one](../Lua/HelloWorld.lua)
+such as [this one](/Lua/HelloWorld.lua)
 It is basically:
 `print("Hello World")`
 There is no reason why you should not start your coding experience using procedural techniques, right from the start, whatever the age group.
 
 In a primary school setting
-I go straight [to this](../lua/HelloWorld2.lua")
+I go straight [to this](/lua/HelloWorld2.lua")
 ```lua
 function main()
 	print("Hello World Version2")
