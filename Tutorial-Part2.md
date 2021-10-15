@@ -56,11 +56,15 @@ main()
 input("Press Enter to quit")
 ```
 Note the use of 'docstrings' under each definition. They indicate what the function is used for.
-The function get_string() takes one obligatory parameter: the 'prompt', and 3 optional parameters for title case, minimum and maximum length
-Dummy data has been returned in the get_user_data() function to prevent errors
+
+The function get_string() takes one obligatory parameter: the 'prompt', and 3 optional parameters for title case, minimum and maximum length.
+
+Dummy data has been returned in the get_user_data() function to prevent errors.
+
 This will run OK, but it only gets the data, then finishes, but you can see how the relatively simple task of getting two
 names and printing them out has been broken down into a total of four functions/procedures.
 This is overkill in such a small application, but if it reached several hundred lines, it is far easier to maintain than a single non-branching script.
+
 Also it prepares the way for using multiple files, which can make re-using code so much easier.
 
 Starting with the get_string() function, its full code is:
@@ -84,11 +88,31 @@ def get_string(prompt, with_title = False, min = 1, max = 20): # with_title, min
 ```
 This function has many useful features:
 1. The loop uses a variable flag NOT the typical `While True: break` construct
-2. Output strings use interpolation `f"{}"` to combine expressions and variables into the final string.
-3. Leading and trailing spaces are removed prior to validation `.strip()`
-4. Unless min has been set to 0, pressing Enter only does not validate
-5. If the input string is outside the min/max bounds the input is not validated
-6. Only validated input is returned. If you ask for 4 to 8 characters in Title Case, that's what you get.
+2. The input prompt automaically inserts "_" after the prompt, ready fo user input
+3. Output strings use interpolation `f"{}"` to combine expressions and variables into the final string.
+4. Leading and trailing spaces are removed prior to validation `.strip()`
+5. Unless min has been set to 0, pressing Enter only does not validate
+6. If the input string is outside the min/max bounds the input is not validated
+7. Only validated input is returned. If you ask for 4 to 8 characters in Title Case, that's what you get.
+
+Now this re-useable function has been written the remaing ones can be fleshed out:
+```python
+def display_data(first_name, surname):
+	''' all screen output from this procedure '''
+	print(f"Hello {first_name} {surname}")
+
+def get_user_data():
+	''' function to return 2 strings guaranteed to have validated values '''
+	first_name = get_string("Please type your first name (min 1 chars, max 10)", True, 1, 10)
+	surname = get_string("Please type your surname (min 2 chars, max 20)", True, 2, 20)
+	return first_name, surname
+```
+Again note the following:
+1. Docstrings
+2. String interpolation
+3. Passing variables between functions, NOT using global variables and the horrible Python Global keyword. C# programmers cringe when we have to use that.
+
+The entire code can be found here.
 
 
 
