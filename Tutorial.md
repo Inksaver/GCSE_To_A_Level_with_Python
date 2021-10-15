@@ -1,9 +1,12 @@
-The first code written in a text based language is the obligatory "Hello World", such as this one written in Lua:
-<a href="lua/HelloWorld.lua">Hello World v1</a>
+The first code written in a text based language is the obligatory "Hello World"
+
+such as [this one](../Lua/HelloWorld.lua)
 It is basically:
 `print("Hello World")`
 There is no reason why you should not start your coding experience using procedural techniques, right from the start, whatever the age group.
-In a primary school setting, I go straight from this to <a href="lua/HelloWorld2.lua">Hello World v2</a>
+
+In a primary school setting
+I go straight [to this](../lua/HelloWorld2.lua")
 ```lua
 function main()
 	print("Hello World Version2")
