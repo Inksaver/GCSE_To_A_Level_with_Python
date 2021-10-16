@@ -1,7 +1,7 @@
 Assuming you have looked at Tutorial-Part1, similar ideas can be implemented for your Python scripts.
 Always start with a main() function.
 
-In C, C++ C# and Java you have no choice, so get into the swing of it straight away. You could use any of these languages in future
+In C, C++ C# and Java you have no choice, so get into the swing of it straight away. You could use any of these languages in future.
 ```python
 def main():
 	''' start here. use main() as a launch pad for other functions '''
@@ -29,9 +29,9 @@ It works, but there are some minor problems:
 4. If there was a lot more data to be collected, more code needs to be added, and a single script can get very long.
 
 This is how to do it in a procedural way:
-1. We want to get 2 strings from the user, so maybe a function get_user_data()
-2. Those strings should be validated for at least 2 characters per name, so 'Jo Lo' does not miss out. maybe get_string().
-3. Finally output the name to the console, maybe display_data()
+1. We want to get 2 strings from the user, so maybe a function `get_user_data()`.
+2. Those strings should be validated for at least 2 characters per name, so 'Jo Lo' does not miss out. maybe `get_string()`.
+3. Finally output the name to the console, maybe `display_data()`.
 
 A quick code layout could be:
 ```python
@@ -57,9 +57,9 @@ input("Press Enter to quit")
 ```
 Note the use of 'docstrings' under each definition. They indicate what the function is used for.
 
-The function get_string() takes one obligatory parameter: the 'prompt', and 3 optional parameters for title case, minimum and maximum length.
+The function `get_string()` takes one obligatory parameter: the 'prompt', and 3 optional parameters for title case, minimum and maximum length.
 
-Dummy data has been returned in the get_user_data() function to prevent errors.
+Dummy data has been returned in the `get_user_data()` function to prevent errors.
 
 This will run OK, but it only gets the data, then finishes, but you can see how the relatively simple task of getting two
 names and printing them out has been broken down into a total of four functions/procedures.
@@ -67,7 +67,7 @@ This is overkill in such a small application, but if it reached several hundred 
 
 Also it prepares the way for using multiple files, which can make re-using code so much easier.
 
-Starting with the get_string() function, its full code is:
+Starting with the `get_string()` function, its full code is:
 ```python
 def get_string(prompt, with_title = False, min = 1, max = 20): # with_title, min and max can be over-ridden by calling code
 	''' Public method: Gets a string from the user, with options for Title Case, length of the string. Set min to 0 to allow empty string return '''
@@ -87,12 +87,12 @@ def get_string(prompt, with_title = False, min = 1, max = 20): # with_title, min
 	return user_input
 ```
 This function has many useful features:
-1. The loop uses a variable flag NOT the typical `While True: break` construct
-2. The input prompt automaically inserts "_" after the prompt, ready fo user input
+1. The loop uses a variable flag NOT the typical `While True: break` construct.
+2. The input prompt automaically inserts "_" after the prompt, ready for user input
 3. Output strings use interpolation `f"{}"` to combine expressions and variables into the final string.
-4. Leading and trailing spaces are removed prior to validation `.strip()`
-5. Unless min has been set to 0, pressing Enter only does not validate
-6. If the input string is outside the min/max bounds the input is not validated
+4. Leading and trailing spaces are removed prior to validation `.strip()`.
+5. Unless min has been set to 0, pressing Enter only does not validate.
+6. If the input string is outside the min/max bounds the input is not validated.
 7. Only validated input is returned. If you ask for 4 to 8 characters in Title Case, that's what you get.
 
 Now this re-useable function has been written the remaing ones can be fleshed out:
@@ -112,7 +112,7 @@ Again note the following:
 2. String interpolation
 3. Passing variables between functions, NOT using global variables and the horrible Python Global keyword. C# programmers cringe when we have to use that.
 
-The entire code can be found here.
+The entire code can be found [here.](/Lua/04-InputExample03.py)
 
 
 
