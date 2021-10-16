@@ -2,6 +2,8 @@ Assuming you have looked at Tutorial-Part1, similar ideas can be implemented for
 Always start with a main() function.
 
 In C, C++ C# and Java you have no choice, so get into the swing of it straight away. You could use any of these languages in future.
+
+Python ['Hello World':](/Python/01-HelloWorld.py)
 ```python
 def main():
 	''' start here. use main() as a launch pad for other functions '''
@@ -14,8 +16,8 @@ When starting a new script from now on, start with an empty `def main()` with th
 
 An example of writing a procedural script for the following task:
 
-"Get the first name and surname from the user and greet them using both names".
-Easy!
+"Get the first name and surname from the user and greet them using both names".<br>
+[Easy!](/Python/02-InputExample01.py)
 ```python
 first_name = input("Type your first name")
 surname = input("Type your surname")
@@ -23,9 +25,9 @@ print("Hello", first_name, surname)
 input("Enter to quit")
 ```
 It works, but there are some minor problems:
-1. No validation - The user can just press the Enter key
-2. The input prompt does not have any separation from the text the user is entering
-3. The appearance of the input/output is a bit basic
+1. No validation - The user can just press the Enter key.
+2. The input prompt does not have any separation from the text the user is entering.
+3. The appearance of the input/output is a bit basic.
 4. If there was a lot more data to be collected, more code needs to be added, and a single script can get very long.
 
 This is how to do it in a procedural way:
@@ -33,7 +35,7 @@ This is how to do it in a procedural way:
 2. Those strings should be validated for at least 2 characters per name, so 'Jo Lo' does not miss out. maybe `get_string()`.
 3. Finally output the name to the console, maybe `display_data()`.
 
-A quick code layout could be:
+A quick code layout [could be:](/Python/03-InputExample02.py)
 ```python
 def get_string(prompt, with_title = False, min = 1, max = 20): # with_title, min and max can be over-ridden by calling code
 	''' Public method: Gets a string from the user '''
@@ -95,7 +97,7 @@ This function has many useful features:
 6. If the input string is outside the min/max bounds the input is not validated.
 7. Only validated input is returned. If you ask for 4 to 8 characters in Title Case, that's what you get.
 
-Now this re-useable function has been written the remaing ones can be fleshed out:
+Now this re-useable function has been written the remaining ones can be fleshed out:
 ```python
 def display_data(first_name, surname):
 	''' all screen output from this procedure '''
@@ -112,7 +114,7 @@ Again note the following:
 2. String interpolation
 3. Passing variables between functions, NOT using global variables and the horrible Python Global keyword. C# programmers cringe when we have to use that.
 
-The entire code can be found [here.](/Lua/04-InputExample03.py)
+The entire completed can be found [here.](/Python/04-InputExample03.py)
 
 
 
