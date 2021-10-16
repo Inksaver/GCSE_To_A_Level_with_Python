@@ -116,5 +116,6 @@ Again note the following:
 
 The entire completed can be found [here.](/Python/04-InputExample03.py)
 
+Part3 of this tutorial takes the idea of the re-useable function a step further to create a code module library file.
 
 
