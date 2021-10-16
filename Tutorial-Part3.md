@@ -55,9 +55,9 @@ main()
 # if running from a console instead of an IDE
 kb.get_string("Press Enter to Quit", False, 0, 20) # Used instead of input("Press Enter to Quit")
 ```
-To follow this tutorial, download the demo file seen above.
+To follow this tutorial, download the [demo file](/Python/05-kboard_demo.py) seen above.
 
-Download the kboard.py file and place it inside a sub-directory of your project called 'lib'.
+Download the [kboard.py file](/Python/lib/kboard.py) and place it inside a sub-directory of your project called 'lib'.
 
 When you run it, there is a dictionary created in main(), which remains local to the main() function.
 This dictionary is passed between functions as required, a behaviour rarely seen in student projects.
