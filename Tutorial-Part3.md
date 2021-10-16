@@ -80,7 +80,7 @@ Finally a useful menu utility is called which gives the user numbered options, a
 
 There is an [exercise that you can use](/Python/06-Exercise.py) to convert a typical student script without functions into a fully procedural script by re-factoring the code.<br>
 Why not give it a go?
-```
+```python
 '''
 Write a program to create an account for a web or application login.
 
