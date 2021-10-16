@@ -2,12 +2,14 @@ In Part2 the idea of writing a function that could be re-used by copy/pasting to
 This was the `get_string()` function.
 Why not take this a step further and create a library of similar input related functions, say to get guaranteed return of integer,
 float and boolean values, and maybe even a numbered menu system.
-An example of such a library can be found [here.](/Python/kboard.py) It is 105 lines long, so will not be shown in this file.
+An example of such a library can be found [here.](/Python/lib/kboard.py) It is 105 lines long, so will not be shown in this file.
 
-There is a demo file linked in it from Pastebin, but a different demo is used in this tutorial:
+There is a demo file linked in it from Pastebin, but a different [demo](/Python/05-kboard_demo.py) is used in this tutorial:
 
 ```python
-import kboard as kb # shortens the module (static class) name to kb
+# import kboard as kb   # if kboard.py is in same directory
+import lib.kboard as kb # if kboard.py is in a separate /lib/kboard.py sub-directory
+# as kb shortens the module name to kb
 
 def display_data(data):
 	''' displays the contents of the dictionary 'data' '''
