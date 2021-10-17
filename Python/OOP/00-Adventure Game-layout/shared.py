@@ -19,7 +19,6 @@ locations["hotel room"].to_south = ""
 locations["hotel room"].to_west = ""
 locations["hotel room"].item_required = "key card"              # key of an item from the items dictionary
 locations["hotel room"].items = ["torch","plastic sword"]       # a Python list of the dictionary keys of items in the location
-}
 '''
 items:dict = {}
 locations:dict = {}
