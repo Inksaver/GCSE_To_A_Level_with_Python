@@ -21,6 +21,6 @@ locations["hotel room"].item_required = "key card"              # key of an item
 locations["hotel room"].items = ["torch","plastic sword"]       # a Python list of the dictionary keys of items in the location
 }
 '''
-items = {}
-locations = {}
-current_location = ""
+items:dict = {}
+locations:dict = {}
+current_location:str = ""
