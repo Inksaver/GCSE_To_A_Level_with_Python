@@ -19,11 +19,11 @@ class Item:
 	self._description = value
   
     @property
-	def name(self) -> str:			# the @property decorator allows two def name(): functions 
-	    return self._name
+    def name(self) -> str:		# the @property decorator allows two def name(): functions 
+	return self._name
     
     @name.setter
-	def name(self, value:str) -> None:	# same signature but the @name.setter allows this
+    def name(self, value:str) -> None:	# same signature but the @name.setter allows this
 	self._name = value
 ```
 So we are finally starting OOP.<br>
@@ -43,4 +43,29 @@ print(torch.get_description())
 torch.name = "LED Torch"
 torch.set_description("Cheap LED torch from the pound shop")
 ```
+So why the different ways of doing it? Why cant I use `print(torch.description)`?
 
+In the Item class, two different ways of dealing with the class 'properties' (variables) has been used.<br>
+The older method works ok, but is less intuitive:
+```python
+def get_description(self) -> str:
+	return self._description
+```
+This uses a good old-fashioned function to 'get' the value, so you have to use `item.get_description()`<br>
+Same with 'set' the value: `item.set_description(value)`
+
+This is still the case in Java.
+
+The more modern approach is to use 'decorators' which allow you to have two functions with the same name, one of which 'gets' the value, the other 'sets' a new value:
+```python
+    @property
+    def name(self) -> str:
+	return self._name
+    
+    @name.setter
+    def name(self, value:str) -> None:
+	self._name = value
+```
+
+the 'getter' decorator is `@property`<br>
+The 'setter' decorator is `variable_name.setter`
