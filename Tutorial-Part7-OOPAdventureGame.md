@@ -4,7 +4,7 @@ In part 6 the player code module was used to define the player, and an introduct
 
 There are no changes to `main()`
 
-There is another file added [item.py:](/Python/OOP/02-Adventure%20Game+player+item/item.py), which has to be added to the imports.
+There is another file added [item.py:](/Python/OOP/02-Adventure%20Game%2Bplayer%2Bitems/item.py), which has to be added to the imports.
 ```python
 class Item:
 	#constructor
