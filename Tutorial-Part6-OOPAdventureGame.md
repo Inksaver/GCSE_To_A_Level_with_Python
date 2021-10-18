@@ -2,6 +2,21 @@
 
 In part 5 the skeleton of a game was presented. In this part, the functions `display_intro()` and `setup_player()` are implemented.
 
+There are some changes to `main()`:
+```python
+def main() -> None:
+	''' Everything runs from here '''
+	player.character_types:list = ["Fighter", "Wizard", "Ninja", "Theif"] 	# set the possible character types in player first
+	display_intro("| Welcome to an Epic Adventure Game |")			# set the scene for your adventure game
+	setup_player(1.5)							# set the value for the delay between text output
+	setup_items()								# create your world
+	setup_world()								# setup the world
+	play()									# play the game
+```
+1. The list of possible character types is assigned to the player module.
+2. A string is passed to `display_intro()`
+3. A 1.5 second delay is passed to `setup_player()`
+
 Starting with `display_intro()`:
 
 ```python
@@ -73,4 +88,5 @@ def setup_player(delay:float) -> None:
 	print(f"Inventory:            {inventory}")
 	print(''.ljust(60,'-'))
 ```
- 
+
+There is no need to use the `global` keyword in this function, as the variables referred to are read-only here, and display without problems
