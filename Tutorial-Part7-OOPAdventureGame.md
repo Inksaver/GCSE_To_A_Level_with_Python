@@ -78,14 +78,14 @@ Note the use of the variable `self`. This is added with the constructor, and all
 The function in main(): `setup_items()` has now been implemented:
 
 ```python
-   def setup_items() -> None:
+def setup_items() -> None:
 	''' create items '''
 	# example 1 use a temp object variable then add the object to the dictionary
-	obj = item.Item("torch", "a flaming wooden torch")	# create an Item object - name: "torch", description "a flaming wooden torch"
+	obj:item.Item = item.Item("torch", "a flaming wooden torch")	# create an Item object - name: "torch", description "a flaming wooden torch"
 	shared.items.update({"torch":obj})			# add it to the shared dictionary with the key 'torch'
 
 	# example 2 add an iron key directly to the dictionary without temp variable. dictionary keys can contain spaces
-	shared.items.update({"iron key":item.Item("iron key", "a 5 lever iron key")})
+	shared.items.update({"key card":item.Item("key card", "a magnetic strip key card: Property of Premier Inns")})
 
 	#example 3 use a function to add a book
 	add_to_items("book", "a copy of 'Python in easy steps' by Mike McGrath")
