@@ -1,4 +1,4 @@
-This part  moves on to introduce simple classes and objects, in addition to using code modules as described in [Part4.](Tutorial-Part4.md)
+This part  moves on to introduce simple classes and objects, in addition to using code modules as described in [Part3.](Tutorial-Part3.md)
 
 The concept here is to design a simple text adventure game, where there is 1 player (code module)
 that can collect items (class with object instances) and travel around different locations (class with object instances).
