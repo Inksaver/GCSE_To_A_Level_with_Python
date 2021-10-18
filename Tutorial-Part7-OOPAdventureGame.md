@@ -7,23 +7,23 @@ There are no changes to `main()`
 There is another file added [item.py:](/Python/OOP/02-Adventure%20Game%2Bplayer%2Bitems/item.py), which has to be added to the imports.
 ```python
 class Item:
-	#constructor
-	def __init__(self, name:str, description:str = ""):
-		self._name:str  = name
-		self._description:str = description
+    #constructor
+    def __init__(self, name:str, description:str = ""):
+	self._name:str  = name
+	self._description:str = description
     
-  def get_description(self) -> str:
-		return self._description
+    def get_description(self) -> str:
+	return self._description
 	
-	def set_description(self, value:str) -> None:
-		self._description = value
+    def set_description(self, value:str) -> None:
+	self._description = value
   
-  @property
+    @property
 	def name(self) -> str:			# the @property decorator allows two def name(): functions 
-		return self._name
+	    return self._name
     
-	@name.setter
+    @name.setter
 	def name(self, value:str) -> None:	# same signature but the @name.setter allows this
-		self._name = value
+	self._name = value
 ```
 
