@@ -3,7 +3,8 @@ This part  moves on to introduce simple classes and objects, in addition to usin
 The concept here is to design a simple text adventure game, where there is 1 player (code module)
 that can collect items (class with object instances) and travel around different locations (class with object instances).
 
-The [first implementation](/Python/OOPAdventureGame/00-Adventure%20Game-layout.py) is a design of the overall layout:
+The [first implementation](/Python/OOP/00-Adventure%20Game-layout) is a design of the overall layout. The file [main.py](/Python/OOP/00-Adventure%20Game-layout/main.py) demonstrates this perfectly:
+
 ```python
 import lib.kboard as kb #note use of lib. to locate file inside a subdirectory called lib
 import player, shared
