@@ -97,3 +97,8 @@ def add_to_items(key_name:str, description:str) -> None:
 	''' add a new item to the shared.items dictionary '''
 	shared.items.update({key_name: item.Item(key_name, description)})
 ```
+
+Now you can use classes to create multiple item objects, such as torhes, keys, rocks, spells etc. and store them all in one dictionary.<br>
+Add more properties to them if required such as value, cost, hitPoints, healing, etc.
+
+Next part introduces a locations class which also has methods to carry out tasks related to each location, such as displaying a description, a list of items found within it, and the exits from it.
