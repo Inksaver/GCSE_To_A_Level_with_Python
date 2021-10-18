@@ -4,7 +4,29 @@ In Part2 the idea of writing a function that could be re-used by copy/pasting to
 This was the `get_string()` function.
 Why not take this a step further and create a library of similar input related functions, say to get guaranteed return of integer,
 float and boolean values, and maybe even a numbered menu system.<br>
-An example of such a library can be found [here.](/Python/lib/kboard.py) It is 105 lines long, so will not be shown here.
+An example of such a library can be found [here.](/Python/lib/kboard.py) It is 91 lines long, so will not be shown in full here but one of the methods, which is an adaptation of the function first seen in 04-inputExample03.py now appears as:
+
+```python
+def get_string(prompt:str, with_title:bool = False, min_value:int = 1, max_value:int = 20) -> str: # with_title, min_value and max_value can be over-ridden by calling code
+	''' Public method: Gets a string from the user, with options for Title Case, length of the string. Set min_value to 0 to allow empty string return '''
+	valid:bool = False
+	while not valid:
+		user_input:str = input(prompt + "_").strip()	# change '_' for any preferred character eg '>'
+		if len(user_input) == 0 and min_value > 0:
+			print("\nJust pressing the Enter key or spacebar doesn't work...")
+		else:		
+			if len(user_input) >= min_value and len(user_input) <= max_value:
+				if with_title:
+					user_input = user_input.title()
+				valid = True
+			else:
+				print(f"\nTry entering text between {min_value} and {max_value} characters...")
+
+	return user_input
+```
+Notice the relatively new (Python 3.5) Type hinting is used. As a C# programmer, the hinting is extremely useful, as it gives an indication of the variable type when declared or passed as parameters, and the return type of a function.
+
+A return type of `-> None` means it is a procedure, equivalent to C#'s void return type.
 
 There is a demo file linked in it from Pastebin, but a different [demo](/Python/05-kboard_demo.py) is used in this tutorial:
 
