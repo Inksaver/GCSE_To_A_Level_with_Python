@@ -119,4 +119,8 @@ def check_exit(here:location.Location, direction:str) -> str:
 
 This function checks if an item is required to enter the selected direction.<br>
 If an item is required, it checks whether the item is in the inventory. If so movement is allowed.<br>
-The function returns the key to the next location, which remains unchanged if the required item is not in the player's inventory
+The function returns the key to the next location, which remains unchanged if the required item is not in the player's inventory.
+
+The game is now working, and can be much improved by adding new items and locations, perhaps enemies with a new class, and weapons as a sub-class of items, which it could inherit.
+
+Output can be vastly improved with the use of the colorama module.
