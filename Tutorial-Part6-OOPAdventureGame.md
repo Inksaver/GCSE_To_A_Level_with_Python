@@ -69,6 +69,16 @@ def setup_player(delay:float) -> None:
 	os.system('cls')
  ```
  
+ The player module is updated with the user's choice of character as follows:
+ 
+```python
+def update_stats(character_index:int) -> None:
+	''' modify health and strength depending on character selected '''
+	global health, strength # major failing in Python. Declared in body of script = global?
+	health += character_index * 2
+	strength -= character_index * 2
+```
+ 
  The line `if debug:` refers to a global boolean variable set to True at the start of the script.
  This allows you to see the result of the changes you have made to the player code module.
  The display of the player properties is called from a function inside the player module: `player.display_player()`:
