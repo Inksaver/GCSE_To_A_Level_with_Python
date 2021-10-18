@@ -1,4 +1,4 @@
-<h1>Tutorial Part6 Text Adventure Game </h1>
+<h1>Tutorial Part7 Text Adventure Game </h1>
 
 In part 6 the player code module was used to define the player, and an introduction to the game initiated. In this part, the functions `add_to_items()` and `setup_items()` are implemented.
 
