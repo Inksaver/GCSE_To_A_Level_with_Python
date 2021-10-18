@@ -17,7 +17,6 @@ def play() -> None:
 		here:location.Location = shared.locations[shared.current_location]
 		exits:list = here.display_location()
 		action, param = take_action(here, exits)
-		#action:str, param:str = take_action(here, exits)
 		if action == "go":
 			#check if next location has item_required
 			shared.current_location = check_exit(here, param)		
@@ -80,6 +79,44 @@ def take_action(here:location.Location, exits:list) -> [str,str]:
 		return "inventory", ""
 ```
 This sets up the menu items to display, consisting of:
-1. Examine item if any exist
-2. Take item if any exist
-3. 
+1. Examine item(s) if any exist
+2. Take item(s) if any exist
+3. Open your inventory
+4. List any exits
+5. Quit
+
+If the user selects an exit, the function returns "go", direction
+If the user selects Examine or Take, the function returns "Examine" or "Take" , item
+If the user selects "quit", the function returns "quit", ""
+If the user selects "inventory", the function returns "inventory", ""
+
+The `play()` function continues with a conditional block depending on the returned values.<br>
+If "go" is selected it calls `check_exit(here, param)`:
+```python
+def check_exit(here:location.Location, direction:str) -> str:
+	''' check if next location has an item_required '''
+	item_required:str = ""
+	next_location:location.Location = here
+	
+	if direction == "to_north":
+		next_location = shared.locations[here.to_north]
+	elif direction == "to_east":
+		next_location = shared.locations[here.to_east]
+	elif direction == "to_south":
+		next_location = shared.locations[here.to_south]
+	elif direction == "to_west":
+		next_location = shared.locations[here.to_west]
+	item_required = next_location.item_required	
+	if item_required != "":
+		if item_required not in player.inventory:
+			os.system('cls')
+			print(f"You need {item_required} in your inventory to go that way")
+			time.sleep(2)
+			next_location = here
+	
+	return next_location.name
+```
+
+This function checks if an item is required to enter the selected direction.<br>
+If an item is required, it checks whether the item is in the inventory. If so movement is allowed.<br>
+The function returns the key to the next location, which remains unchanged if the required item is not in the player's inventory
