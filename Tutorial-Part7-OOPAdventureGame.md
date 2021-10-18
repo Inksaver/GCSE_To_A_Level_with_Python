@@ -54,7 +54,7 @@ def get_description(self) -> str:
 This uses a good old-fashioned function to 'get' the value, so you have to use `item.get_description()`<br>
 Same with 'set' the value: `item.set_description(value)`
 
-This is still the case in Java. Use of decorators is becoming more popular. It also matches C#'s `public string Name {get; set;}` format.
+This is still the case in Java.<br>
 
 The more modern approach is to use 'decorators' which allow you to have two functions with the same name, one of which 'gets' the value, the other 'sets' a new value:
 ```python
@@ -68,7 +68,8 @@ The more modern approach is to use 'decorators' which allow you to have two func
 ```
 
 the 'getter' decorator is `@property`<br>
-The 'setter' decorator is `@variable_name.setter`
+The 'setter' decorator is `@variable_name.setter`<br>
+Use of decorators is becoming more popular. Decorators also match C#'s `public string Name {get; set;}` format.
 
 Note the use of the variable `self`. This is added with the constructor, and allows the class to refer to itself when functions are called. This is what allows you to make multiple objects in memory at the same time. If you call a function in an object, it has its own copy of all the functions and variables given to it at construction, and uses `self` to refer to them.
 
