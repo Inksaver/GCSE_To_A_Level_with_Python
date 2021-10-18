@@ -43,7 +43,7 @@ Every time the loop runs, the following takes place:
 4. pass here and the exits list to the `take_action()` helper function:
 
 ```python
-def	take_action(here:object, exits:list) -> [str,str]:
+def take_action(here:location.Location, exits:list) -> [str,str]:
 	''' choose player action '''
 	options:list = []
 	# examine / take any items
@@ -79,3 +79,7 @@ def	take_action(here:object, exits:list) -> [str,str]:
 		# open inventory
 		return "inventory", ""
 ```
+This sets up the menu items to display, consisting of:
+1. Examine item if any exist
+2. Take item if any exist
+3. 
