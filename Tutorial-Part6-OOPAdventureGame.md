@@ -1,7 +1,7 @@
 <h1>Tutorial Part6 Text Adventure Game </h1>
 
 In part 5 the skeleton of a game was presented. In this part, the functions `display_intro()` and `setup_player()` are implemented.
-The code can be found:[01-Adventure Game+player](01-Adventure%20Game%2Bplayer)
+The code can be found here:[01-Adventure Game+player](/Python/OOP/01-Adventure%20Game%2Bplayer)
 
 There are some changes to `main()`:
 ```python
