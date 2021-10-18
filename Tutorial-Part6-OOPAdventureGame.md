@@ -89,4 +89,12 @@ def setup_player(delay:float) -> None:
 	print(''.ljust(60,'-'))
 ```
 
-There is no need to use the `global` keyword in this function, as the variables referred to are read-only here, and display without problems
+There is no need to use the `global` keyword in this function, as the variables referred to are read-only here, and display without problems.
+
+The most important things to learn from this is that a code module containing both variables (properties) and functions (methods) demonstrates how useful they are.
+
+Unfortunately you can only use this technique if you have one player.
+
+Wouldn't it be great if you could use the same techniques on more than one player?<br>
+Or more than one game item?<br>
+Or more than one location in your game?
