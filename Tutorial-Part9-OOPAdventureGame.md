@@ -123,4 +123,4 @@ The function returns the key to the next location, which remains unchanged if th
 
 The game is now working, and can be much improved by adding new items and locations, perhaps enemies with a new class, and weapons as a sub-class of items, which it could inherit.
 
-Output can be vastly improved with the use of the colorama module.
+Output can be vastly improved with the use of the [colorama module.](https://github.com/Inksaver/Python_ColorConsole)
