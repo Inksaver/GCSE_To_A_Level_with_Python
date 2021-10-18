@@ -116,7 +116,7 @@ Again note the following:
 2. String interpolation
 3. Passing variables between functions, NOT using global variables and the horrible Python Global keyword. C# programmers cringe when we have to use that.
 
-The entire completed can be found [here.](/Python/04-InputExample03.py)
+The entire completed code can be found [here.](/Python/04-InputExample03.py)
 
 Part3 of this tutorial takes the idea of the re-useable function a step further to create a code module library file.
 
