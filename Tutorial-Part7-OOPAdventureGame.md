@@ -54,7 +54,7 @@ def get_description(self) -> str:
 This uses a good old-fashioned function to 'get' the value, so you have to use `item.get_description()`<br>
 Same with 'set' the value: `item.set_description(value)`
 
-This is still the case in Java. Use of decorators is becoming more popular. It also matches C#'s `public Name {get; set;}` format.
+This is still the case in Java. Use of decorators is becoming more popular. It also matches C#'s `public string Name {get; set;}` format.
 
 The more modern approach is to use 'decorators' which allow you to have two functions with the same name, one of which 'gets' the value, the other 'sets' a new value:
 ```python
