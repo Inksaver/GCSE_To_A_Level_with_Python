@@ -1,7 +1,9 @@
-In the last part, an Items class was introduced. This part has a new file called location.py,
-which is the location class, from which game locations can be made, with exits, contained items, puzzles, enemies etc.
+<h1>Tutorial Part8 Text Adventure Game </h1>
 
-The code for this game stage can be found here: 
+In the last part, an Items class was introduced. This part has a new file called location.py,
+This is the location class, from which game locations can be made, with exits, contained items, puzzles, enemies etc.
+
+The code for this game stage can be found here: [03-Adventure Game+world](/Python/OOP/03-Adventure%20Game%2Bworld)
 
 The locations class definition and constructor:
 ```python
