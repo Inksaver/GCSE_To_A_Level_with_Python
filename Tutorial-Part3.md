@@ -4,7 +4,7 @@ In Part2 the idea of writing a function that could be re-used by copy/pasting to
 This was the `get_string()` function.
 Why not take this a step further and create a library of similar input related functions, say to get guaranteed return of integer,
 float and boolean values, and maybe even a numbered menu system.<br>
-An example of such a library can be found [here.](/Python/lib/kboard.py) It is 91 lines long, so will not be shown in full here but one of the methods, which is an adaptation of the function first seen in 04-inputExample03.py now appears as:
+An example of such a library can be found [here.](/Python/lib/kboard.py) It is 91 lines long, so will not be shown in full here but one of the methods, which is an adaptation of the function first seen in [04-inputExample03.py](/Python/04-inputExample03.py) now appears as:
 
 ```python
 def get_string(prompt:str, with_title:bool = False, min_value:int = 1, max_value:int = 20) -> str: # with_title, min_value and max_value can be over-ridden by calling code
