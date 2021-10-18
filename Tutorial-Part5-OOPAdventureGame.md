@@ -38,7 +38,7 @@ def display_location(here) -> list:
 		
 	return exits
 		
-def	take_action(here, exits:list) -> None:
+def take_action(here, exits:list) -> None:
 	''' choose player action '''
 	
 def main() -> None:
