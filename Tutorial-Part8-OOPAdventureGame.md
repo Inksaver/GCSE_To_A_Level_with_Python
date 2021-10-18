@@ -49,7 +49,7 @@ def setup_world() -> None:
 	# method 2 directly to shared.locations
 	shared.locations.update({"coridoor":location.Location("coridoor", "a dark coridoor with a worn carpet",
 														  "magic portal", "lift", "", "hotel room",
-														  [], "")})
+														  ["key card"], "")})
 	# method 3 use a function
 	# add_to_locations(name, description, tonorth, toeast, tosouth, towest, item_required, items)
 	add_to_locations("lift", "a dangerous lift with doors that do not close properly", "", "", "", "coridoor", [], "")
