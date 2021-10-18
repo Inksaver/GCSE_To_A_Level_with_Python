@@ -1,3 +1,5 @@
+<h1>Tutorial Part5 Text Adventure Game </h1>
+
 This part  moves on to introduce simple classes and objects, in addition to using code modules as described in [Part3.](Tutorial-Part3.md)
 
 The concept here is to design a simple text adventure game, where there is 1 player (code module)
@@ -50,3 +52,6 @@ def main() -> None:
 main()
 input("Enter to quit")
 ```
+This code needs the kboard library, which has been copied to this directory in lib/kboard.py for convenience.
+
+As you can see, nothing much happens here, although it does run without error.
