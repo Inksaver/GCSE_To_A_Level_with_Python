@@ -67,7 +67,7 @@ Using a shared module allows you to keep a dictionary of all the game objects in
 
 The player is another code module imported at the beginning:
 
-```
+```python
 ''' This is a Python Module equivalent to a C# static class '''
 
 # properties: Can be directly accessed for read/write
@@ -100,3 +100,4 @@ def display_player() -> None:
 	pass
 ```
 
+The skeleton of an adventure game is now there, ready to be built into a full game.
