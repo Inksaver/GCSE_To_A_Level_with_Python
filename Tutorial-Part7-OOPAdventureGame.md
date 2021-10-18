@@ -84,7 +84,7 @@ def setup_items() -> None:
 	obj:item.Item = item.Item("torch", "a flaming wooden torch")	# create an Item object - name: "torch", description "a flaming wooden torch"
 	shared.items.update({"torch":obj})			# add it to the shared dictionary with the key 'torch'
 
-	# example 2 add an iron key directly to the dictionary without temp variable. dictionary keys can contain spaces
+	# example 2 add a key card directly to the dictionary without temp variable. dictionary keys can contain spaces
 	shared.items.update({"key card":item.Item("key card", "a magnetic strip key card: Property of Premier Inns")})
 
 	#example 3 use a function to add a book
