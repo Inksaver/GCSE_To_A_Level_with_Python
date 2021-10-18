@@ -28,7 +28,7 @@ Notice the relatively new (Python 3.5) Type hinting is used. As a C# programmer,
 
 A return type of `-> None` means it is a procedure, equivalent to C#'s void return type.
 
-There is a demo file linked in it from Pastebin, but a different [demo](/Python/05-kboard_demo.py) is used in this tutorial:
+There is a [demo](/Python/05-kboard_demo.py) for use in this tutorial:
 
 ```python
 # import kboard as kb   # if kboard.py is in same directory
