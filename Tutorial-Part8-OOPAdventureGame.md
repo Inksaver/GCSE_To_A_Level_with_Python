@@ -83,7 +83,7 @@ def add_to_locations(key_name:str, description:str, tonorth:str = '', toeast:str
 	shared.locations[key_name].item_required = item_required
 ```
 The helper function creates the new location object using only the name and description initially, then adds it to the dictionary.<br>
-Exits, Items and required_item are added later, partly to show how to use one of the methods, and 2 properties directly.
+Exits, Items and item_required are added later, partly to show how to use one of the methods, and 2 properties directly.
 
 The game is now constructed, the player and all the elements are there.<br>
 The next stage is to move around the world and interact with the items within it.
