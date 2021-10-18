@@ -19,8 +19,7 @@ The account when created only holds the username and password.
 
 Re-factor this code as follows:
 
-1. Download, import and use the kboard.py code module from https://pastebin.com/UceAJsaV 
-   or https://github.com/Inksaver/GCSE_To_A_Level_with_Python/blob/main/Python/lib/kboard.py
+1. Download, import and use the kboard.py code module from https://github.com/Inksaver/GCSE_To_A_Level_with_Python/blob/main/Python/lib/kboard.py
 2. import os to allow os.system('cls') windows or os.system('clear') mac/unix
 3. import time to work with os.system('cls') for smooth transitions
 4. Break it into a series of functions/procedures, starting with def main()
