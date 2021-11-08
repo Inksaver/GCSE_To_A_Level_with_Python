@@ -28,4 +28,33 @@ class Weapon(item.Item): #inherits item.Item class
 Most tutorials you see on sub-classing work on the principle that the sub-class is written in the same file as the main class. This one is not. It is a separate file, which has a number of consequenses:
 1. It has to import the item class file before it can be used.
 2. It also means the "inherits from class" in the constructor is in the format `item.Item` as seen in `class Weapon(item.Item):`
-3. The keyword 'super' as used in `super.__init__()` cannot be used.
+3. The keyword 'super' as used in `super.__init__()` cannot be used. You get the error `builtins.TypeError: descriptor '__init__' requires a 'super' object but received a 'Weapon'`
+
+There are a few changes to main.py
+1. import weapon
+2. new function add_to_weapons.
+3. new line in setup_items()
+4. change to line in setup_world to include a weapon in the location
+
+```python
+def add_to_weapons(key_name:str, description:str, damage:int) -> None:
+	''' add a new weapon to the shared.items dictionary '''
+	shared.items.update({key_name: weapon.Weapon(key_name, description, damage)})
+```
+
+setup_items() new line:
+
+```python
+# add a weapon to items dictionary. Weapon is a sub-class of Item, with damage
+add_to_weapons("sword", "a toy plastic sword: a dog has chewed the handle..Yuk!", 25)
+```
+
+change to setup_world():
+```python
+# method 2 directly to shared.locations. Include weapon in list of items
+shared.locations.update({"coridoor":location.Location("coridoor", "a dark coridoor with a worn carpet",
+							"magic portal", "lift", "", "hotel room",
+							["key card","sword"], "")})
+```
+
+The newly created weapon object can be stored in the same dictionary as other items, even in C# or Java equivalents, which are much stricter about the datatype of objects stored in them.
