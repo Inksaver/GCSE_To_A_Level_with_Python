@@ -58,3 +58,5 @@ shared.locations.update({"coridoor":location.Location("coridoor", "a dark corido
 ```
 
 The newly created weapon object can be stored in the same dictionary as other items, even in C# or Java equivalents, which are much stricter about the datatype of objects stored in them.
+
+You can add other properties and methods which are unique to weapons, for example an attack() method which inflicts the amount of damage the weapon contains onto an enemy or other object.
