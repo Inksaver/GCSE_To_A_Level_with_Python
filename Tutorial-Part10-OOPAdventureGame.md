@@ -25,7 +25,7 @@ class Weapon(item.Item): #inherits item.Item class
 		self._damage = value	
 
 ```
-Most tutorials you see on sub-classing work on the principle that the sub-class is written in the same file as the main class. This one is not. It is a separate file, which has a number of consequenses:
+Most tutorials you see on sub-classing work on the principle that the sub-class is written in the same file as the main class. This one is not. It is a separate file, which has a number of consequences:
 1. It has to import the item class file before it can be used.
 2. It also means the "inherits from class" in the constructor is in the format `item.Item` as seen in `class Weapon(item.Item):`
 3. The keyword 'super' as used in `super.__init__()` cannot be used. You get the error `builtins.TypeError: descriptor '__init__' requires a 'super' object but received a 'Weapon'`
