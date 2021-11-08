@@ -2,7 +2,7 @@
 
 In the last part, the game is working and can be played through.
 
-The code for this game stage can be found here: [04-Adventure Game+gameloop](/Python/OOP/04-Adventure%20Game%2Bgameloop)
+The code for this game stage can be found here: [05-Adventure Game+weapon](/Python/OOP/05-Adventure%20Game%2Bweapon)
 
 This part adds a new class: Weapon
 
@@ -25,6 +25,7 @@ class Weapon(item.Item): #inherits item.Item class
 		self._damage = value	
 
 ```
-Most tutorials you see on sub-classing work on the principle that the sub-class is written in the same file as the main class. This one is not. It is a separate file, and so in Python, it has to import the item class file before it can be used.
-
-It also means the "inherits from" class in the constructor is in the format `item.Item`
+Most tutorials you see on sub-classing work on the principle that the sub-class is written in the same file as the main class. This one is not. It is a separate file, which has a number of consequenses:
+1. It has to import the item class file before it can be used.
+2. It also means the "inherits from class" in the constructor is in the format `item.Item` as seen in `class Weapon(item.Item):`
+3. The keyword 'super' as used in `super.__init__()` cannot be used.
