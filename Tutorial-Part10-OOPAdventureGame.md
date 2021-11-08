@@ -60,3 +60,51 @@ shared.locations.update({"coridoor":location.Location("coridoor", "a dark corido
 The newly created weapon object can be stored in the same dictionary as other items, even in C# or Java equivalents, which are much stricter about the datatype of objects stored in them.
 
 You can add other properties and methods which are unique to weapons, for example an attack() method which inflicts the amount of damage the weapon contains onto an enemy or other object.
+
+
+A challenge for you at this stage is to improve the output of the game. During play a menu appears with a list of exits:
+```
+You are in a dark coridoor with a worn carpet
+There are exits: north, east, west
+In this location there is: key card, sword
+What next?
+        1) Examine key card
+        2) Take key card
+        3) Examine sword
+        4) Take sword
+        5) Open your inventory
+        6) Go north
+        7) Go east
+        8) Go west
+        9) Quit
+Type the number of your choice (1 to 9)_
+```
+
+It would be great if this menu could be a bit more helpful, So it looks like this:
+```
+You are in a dark coridoor with a worn carpet
+There are exits: north, east, west
+In this location there is: key card, sword
+What next?
+        1) Examine key card
+        2) Take key card
+        3) Examine sword
+        4) Take sword
+        5) Open your inventory
+        6) Go north -> magic portal
+        7) Go east -> lift
+        8) Go west -> hotel room
+        9) Quit
+Type the number of your choice (1 to 9)_
+
+```
+
+Alter the code to make this happen.
+In order to do this, you must be able to follow the code logic and make changes on the way:
+Hints:
+
+1. Where is the menu created?
+2. Where does the menu get it's data from
+3. If I change anything in the menu output to screen, will this have consequences further down the line?
+4. Does the exit list get sliced to obtain just the direction?
+5. If so can it be adapted?
